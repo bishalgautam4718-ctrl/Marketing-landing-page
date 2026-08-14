@@ -13,20 +13,13 @@ Open `http://localhost:3000`.
 
 ## Deploy to Vercel
 
-1. Push this folder to a GitHub repository.
-2. Import that repository in Vercel; its default Next.js settings are correct.
-3. In **Project Settings → Domains**, add `marketing.aiwithbishal.com`.
-4. Redeploy. Your existing valid DNS configuration will serve the site over HTTPS.
+1. Push this folder to GitHub.
+2. Import the repository in Vercel using the default Next.js settings.
+3. Add `marketing.aiwithbishal.com` in **Project Settings → Domains**.
+4. Redeploy. The existing DNS configuration will serve the site over HTTPS.
 
-## Consultation email delivery
+## Consultation form
 
-The consultation form sends two server-side emails, then redirects the client to `/thank-you`:
+The consultation form is the native Flodesk HTML embed stored at `public/flodesk-embed.html`. Its original form action, field names, hidden inputs, tracking configuration, and scripts are preserved. No custom form backend is used.
 
-- You receive their name, email, phone number, business, and consultation goals.
-- They receive a branded confirmation explaining that you will contact them personally.
-
-Copy `.env.example` to `.env.local` locally, then add the same values in **Vercel → Project Settings → Environment Variables**. For Gmail, set `SMTP_USER` to your Gmail address and generate a 16-character **App Password** for `SMTP_PASS` (do not use your normal Gmail password). `BUSINESS_EMAIL` is the inbox where you want enquiries delivered.
-
-After adding the variables, submit one test consultation request from the deployed site and verify both inboxes receive an email.
-
-The project automatically stores each consultation in the `Consultation Leads` tab. The tab includes a frozen branded header, filters, alternating row colors, fitted column widths, and a status dropdown. To prepare or refresh the layout manually, run `npm run setup:sheet`.
+After Flodesk reports a successful submission, the page displays Flodesk's success state briefly and then redirects to `/thanks`. Lead capture and email automation remain inside Flodesk.

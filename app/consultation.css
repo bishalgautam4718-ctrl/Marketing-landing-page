@@ -44,3 +44,27 @@
   .contact-actions{justify-items:stretch}
   .contact-actions a{text-align:center}
 }
+
+.flodesk-contact-box{
+  display:grid;
+  grid-template-columns:minmax(260px,.75fr) minmax(420px,1.25fr);
+  align-items:center;
+  gap:52px;
+  padding:58px 5%;
+}
+.contact-copy{max-width:430px}
+.contact-email{display:inline-block;margin-top:18px;color:#18466d;font-size:13px;font-weight:700}
+.contact-email b{padding-left:10px;color:#0870d8}
+.flodesk-frame{width:100%;max-width:620px;margin-left:auto;background:#fff;border:1px solid rgba(9,33,60,.12);border-top:4px solid #0870d8;border-radius:7px;overflow:hidden;box-shadow:0 22px 55px rgba(8,44,76,.13)}
+.flodesk-load-error{padding:28px;color:#a22929;font-size:14px;line-height:1.6}
+
+@media(max-width:900px){
+  .flodesk-contact-box{grid-template-columns:1fr;gap:36px}
+  .contact-copy{max-width:620px}
+  .flodesk-frame{margin:0;max-width:620px}
+}
+
+@media(max-width:760px){
+  .flodesk-contact-box{padding:34px 18px;gap:28px}
+  .flodesk-frame{border-radius:5px}
+}

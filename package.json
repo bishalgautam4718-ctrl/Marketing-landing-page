@@ -5,14 +5,11 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "setup:sheet": "node scripts/setup-google-sheet.mjs",
     "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
-    "googleapis": "^144.0.0",
     "next": "15.5.21",
-    "nodemailer": "^6.9.16",
     "react": "19.0.0",
     "react-dom": "19.0.0"
   },
@@ -20,7 +17,6 @@
     "@types/node": "^22",
     "@types/react": "^19",
     "@types/react-dom": "^19",
-    "@types/nodemailer": "^6.4.17",
     "typescript": "^5"
   }
 }
