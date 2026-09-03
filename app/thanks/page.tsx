@@ -12,7 +12,7 @@ export default function Thanks() {
 
         <div className="thank-video">
           <iframe
-            src="https://www.youtube.com/embed/67t87u8rq2w?feature=share"
+            src="https://www.youtube.com/embed/6J5A5UzE7OM?feature=share"
             title="AIwithBishal video"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowFullScreen
